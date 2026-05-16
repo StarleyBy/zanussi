@@ -416,6 +416,6 @@ document.querySelectorAll('.chef-cat').forEach(btn => {
 renderDishes(currentCategory);
 
 // ===== SERVICE WORKER =====
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
   navigator.serviceWorker.register('sw.js').catch(() => {});
 }
