@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f5f3ef" media="(prefers-color-scheme: light)" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="ZOPKD7X1A" />
+  <meta name="description" content="Инструкция Zanussi ZOPKD7X1A — управление, режимы, пиролиз, очистка" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <title>ZANUSSI · ZOPKD7X1A</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+
+  <!-- Splash / Header -->
+  <header class="app-header" id="appHeader">
+    <div class="header-brand">
+      <span class="brand-zanussi">ZANUSSI</span>
+      <span class="brand-model">ZOPKD7X1A</span>
+    </div>
+    <div class="header-controls">
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bottom-nav" id="bottomNav">
+    <button class="nav-btn active" data-section="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+      <span>Главная</span>
+    </button>
+    <button class="nav-btn" data-section="control">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      <span>Управление</span>
+    </button>
+    <button class="nav-btn" data-section="modes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+      <span>Режимы</span>
+    </button>
+    <button class="nav-btn" data-section="pyrolysis">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Пиролиз</span>
+    </button>
+    <button class="nav-btn" data-section="cleaning">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v4H3zM3 7v14h18V7"/><path d="M9 11l2 2 4-4"/></svg>
+      <span>Чистка</span>
+    </button>
+    <button class="nav-btn" data-section="chef">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
+      <span>Шеф</span>
+    </button>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="app-main">
+
+    <!-- HOME -->
+    <section class="section active" id="section-home">
+      <div class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-oven">
+          <svg class="oven-svg" viewBox="0 0 200 160" fill="none">
+            <rect x="10" y="10" width="180" height="140" rx="8" stroke="currentColor" stroke-width="1.5" fill="none" class="oven-body"/>
+            <rect x="20" y="50" width="160" height="90" rx="4" stroke="currentColor" stroke-width="1" fill="none" class="oven-door" opacity="0.5"/>
+            <rect x="30" y="60" width="140" height="70" rx="3" stroke="currentColor" stroke-width="0.8" fill="none" class="oven-glass" opacity="0.3"/>
+            <rect x="20" y="14" width="160" height="30" rx="3" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="50" cy="29" r="8" stroke="currentColor" stroke-width="1" fill="none" class="knob" opacity="0.7"/>
+            <circle cx="50" cy="29" r="2" fill="currentColor" opacity="0.7"/>
+            <circle cx="150" cy="29" r="8" stroke="currentColor" stroke-width="1" fill="none" class="knob" opacity="0.7"/>
+            <circle cx="150" cy="29" r="2" fill="currentColor" opacity="0.7"/>
+            <rect x="80" y="20" width="40" height="18" rx="2" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.5"/>
+            <text x="100" y="32" text-anchor="middle" font-size="7" fill="currentColor" font-family="monospace" opacity="0.7">12:00</text>
+            <line x1="30" y1="95" x2="170" y2="95" stroke="currentColor" stroke-width="0.5" opacity="0.2" stroke-dasharray="4,3"/>
+            <line x1="30" y1="110" x2="170" y2="110" stroke="currentColor" stroke-width="0.5" opacity="0.2" stroke-dasharray="4,3"/>
+            <rect x="80" y="138" width="40" height="6" rx="3" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.5"/>
+          </svg>
+        </div>
+        <h1 class="hero-title">Духовой<br/><span class="accent">шкаф</span></h1>
+        <p class="hero-sub">Интерактивная инструкция<br/>Zanussi ZOPKD7X1A</p>
+      </div>
+
+      <div class="home-cards">
+        <div class="home-card" data-goto="control">
+          <div class="card-icon">⚙️</div>
+          <div class="card-text">
+            <strong>Управление</strong>
+            <span>Кнопки и сценарии</span>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+        <div class="home-card" data-goto="modes">
+          <div class="card-icon">🔥</div>
+          <div class="card-text">
+            <strong>Режимы нагрева</strong>
+            <span>Все функции духовки</span>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+        <div class="home-card" data-goto="pyrolysis">
+          <div class="card-icon">🛡️</div>
+          <div class="card-text">
+            <strong>Пиролиз</strong>
+            <span>Самоочистка P1/P2</span>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+        <div class="home-card" data-goto="cleaning">
+          <div class="card-icon">✨</div>
+          <div class="card-text">
+            <strong>Уход и чистка</strong>
+            <span>Уход за прибором</span>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+        <div class="home-card featured" data-goto="chef">
+          <div class="card-icon">👨‍🍳</div>
+          <div class="card-text">
+            <strong>Шеф-помощник</strong>
+            <span>Выбери блюдо → получи режим</span>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+      </div>
+
+      <div class="tech-specs">
+        <div class="spec"><span class="spec-label">Напряжение</span><span class="spec-val">220–240 В / 50–60 Гц</span></div>
+        <div class="spec"><span class="spec-label">Уровней</span><span class="spec-val">5</span></div>
+        <div class="spec"><span class="spec-label">Кабель</span><span class="spec-val">1500 мм</span></div>
+      </div>
+    </section>
+
+    <!-- CONTROL -->
+    <section class="section" id="section-control">
+      <div class="section-header">
+        <h2>Управление</h2>
+        <p class="section-sub">Пошаговые инструкции по настройке</p>
+      </div>
+
+      <div class="control-tabs">
+        <button class="ctrl-tab active" data-ctrl="time">Время</button>
+        <button class="ctrl-tab" data-ctrl="duration">Продолж.</button>
+        <button class="ctrl-tab" data-ctrl="end">Окончание</button>
+        <button class="ctrl-tab" data-ctrl="timer">Таймер</button>
+        <button class="ctrl-tab" data-ctrl="child">Защита</button>
+      </div>
+
+      <!-- TIME -->
+      <div class="ctrl-panel active" id="ctrl-time">
+        <div class="ctrl-title">Установка времени суток</div>
+        <div class="steps-flow">
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action">Подключите духовой шкаф к сети</div>
+              <div class="step-display">На дисплее: <code>ч 12:00</code> — мигает <code>12</code></div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action">Поворот ручки управления</div>
+              <div class="step-detail">Установите количество часов</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-action"><kbd>⏲</kbd> Нажмите кнопку часов</div>
+              <div class="step-display">На дисплее: <code>мин.00</code> — мигает</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <div class="step-action">Поворот ручки управления</div>
+              <div class="step-detail">Установите количество минут</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">✓</div>
+            <div class="step-body">
+              <div class="step-action"><kbd>⏲</kbd> Нажмите кнопку часов</div>
+              <div class="step-display">На дисплее отобразится заданное время</div>
+            </div>
+          </div>
+        </div>
+        <div class="tip-box">💡 Изменить время можно только когда духовой шкаф выключен. Нажимайте кнопку часов повторно для редактирования.</div>
+      </div>
+
+      <!-- DURATION -->
+      <div class="ctrl-panel" id="ctrl-duration">
+        <div class="ctrl-title">Функция «Продолж.» — автовыключение</div>
+        <div class="steps-flow">
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action">Выберите режим нагрева</div>
+              <div class="step-detail">Поверните ручку режимов</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action"><kbd>⏲</kbd> Несколько раз нажмите кнопку часов</div>
+              <div class="step-display">Мигает: <code>|→|</code></div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-action">Поворот ручки → минуты <kbd>⏲</kbd></div>
+              <div class="step-detail">Задайте количество минут, подтвердите</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <div class="step-action">Поворот ручки → часы <kbd>⏲</kbd></div>
+              <div class="step-detail">Задайте количество часов, подтвердите</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">✓</div>
+            <div class="step-body">
+              <div class="step-action">Духовой шкаф выключится автоматически</div>
+              <div class="step-display">Сигнал звучит 2 мин → нажмите любую кнопку</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- END -->
+      <div class="ctrl-panel" id="ctrl-end">
+        <div class="ctrl-title">Функция «Окончание» — время выключения</div>
+        <div class="steps-flow">
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action">Выберите режим нагрева</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action"><kbd>⏲</kbd> Несколько раз нажмите кнопку часов</div>
+              <div class="step-display">Мигает: <code>→|</code></div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-action">Ручка → часы окончания <kbd>⏲</kbd></div>
+              <div class="step-detail">Задайте часы, подтвердите</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">✓</div>
+            <div class="step-body">
+              <div class="step-action">Ручка → минуты  окончания <kbd>⏲</kbd></div>
+              <div class="step-display">Духовка выключится в заданное время</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIMER -->
+      <div class="ctrl-panel" id="ctrl-timer">
+        <div class="ctrl-title">Таймер обратного отсчёта</div>
+        <div class="steps-flow">
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action"><kbd>🔔</kbd> Нажмите кнопку таймера несколько раз</div>
+              <div class="step-display">Мигает: <code>🔔 00</code></div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action">Поворот ручки → секунды и минуты</div>
+              <div class="step-detail">Если &gt; 60 мин — мигает «ч» для часов</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-action">При необходимости задайте часы</div>
+              <div class="step-detail">Таймер запустится через 5 секунд автоматически</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">✓</div>
+            <div class="step-body">
+              <div class="step-action">По истечении — звуковой сигнал 2 мин</div>
+              <div class="step-display">⚠️ На 90% времени — предупредительный сигнал</div>
+            </div>
+          </div>
+        </div>
+        <div class="tip-box">💡 Таймер работает независимо от состояния духового шкафа (включён или выключен). Не управляет нагревом.</div>
+      </div>
+
+      <!-- CHILD LOCK -->
+      <div class="ctrl-panel" id="ctrl-child">
+        <div class="ctrl-title">Защита от детей</div>
+        <div class="steps-flow">
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action">Поверните ручку режимов в положение «Выкл»</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action">Удерживайте <kbd>⏲</kbd> + <kbd>°C</kbd> одновременно 2 сек</div>
+              <div class="step-display">Сигнал → На дисплее: <code>SAFE 🔒</code></div>
+            </div>
+          </div>
+        </div>
+        <div class="tip-box warn-box">🔒 Для отключения — повторите шаг 2. При включении «Блокировки кнопок» во время работы — при выключении автоматически активируется защита от детей.</div>
+        
+        <div class="ctrl-title" style="margin-top:1.5rem">Блокировка кнопок (во время работы)</div>
+        <div class="steps-flow">
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action">Задайте режим и запустите духовку</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action">Удерживайте <kbd>⏲</kbd> + <kbd>°C</kbd> одновременно 2 сек</div>
+              <div class="step-display">На дисплее 5 сек: <code>Loc</code></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- MODES -->
+    <section class="section" id="section-modes">
+      <div class="section-header">
+        <h2>Режимы нагрева</h2>
+        <p class="section-sub">Все функции духового шкафа</p>
+      </div>
+
+      <div class="modes-grid">
+        <div class="mode-card" data-mode="off">
+          <div class="mode-icon">○</div>
+          <div class="mode-name">Выкл</div>
+          <div class="mode-desc">Духовой шкаф отключён</div>
+        </div>
+        <div class="mode-card" data-mode="fast">
+          <div class="mode-icon">⚡</div>
+          <div class="mode-name">Быстрый нагрев</div>
+          <div class="mode-desc">Ускоренный разогрев до заданной температуры</div>
+        </div>
+        <div class="mode-card highlight" data-mode="convection">
+          <div class="mode-icon">🌀</div>
+          <div class="mode-name">Горячий воздух</div>
+          <div class="mode-desc">Одновременное выпекание на 3 уровнях. Температура на 20–40°C ниже, чем для традиционного режима</div>
+        </div>
+        <div class="mode-card" data-mode="pizza">
+          <div class="mode-icon">🍕</div>
+          <div class="mode-name">Функция Пицца</div>
+          <div class="mode-desc">Интенсивное подрумянивание, хрустящая нижняя корочка</div>
+        </div>
+        <div class="mode-card" data-mode="traditional">
+          <div class="mode-icon">🟥</div>
+          <div class="mode-name">Традиционное</div>
+          <div class="mode-desc">Выпекание и жарка на одном уровне</div>
+        </div>
+        <div class="mode-card" data-mode="defrost">
+          <div class="mode-icon">❄️</div>
+          <div class="mode-name">Разморозка</div>
+          <div class="mode-desc">Размораживание овощей и фруктов без нагрева</div>
+        </div>
+        <div class="mode-card" data-mode="moist">
+          <div class="mode-icon">💧</div>
+          <div class="mode-name">Влажная конвекция</div>
+          <div class="mode-desc">Режим экономии энергии. Использует остаточное тепло. Лампа выключается через 30 сек</div>
+        </div>
+        <div class="mode-card highlight" data-mode="hotairplus">
+          <div class="mode-icon">💧🌀</div>
+          <div class="mode-name">Горячий воздух ПЛЮС</div>
+          <div class="mode-desc">Пар + конвекция. Сочность, хрустящая корочка, идеальный разогрев. 2-й уровень, 150–200 мл воды</div>
+        </div>
+        <div class="mode-card" data-mode="grill">
+          <div class="mode-icon">🔆</div>
+          <div class="mode-name">Гриль</div>
+          <div class="mode-desc">Тонкие продукты и тосты. 4-й уровень, макс. температура</div>
+        </div>
+        <div class="mode-card" data-mode="turbogrill">
+          <div class="mode-icon">🔥</div>
+          <div class="mode-name">Турбо-гриль</div>
+          <div class="mode-desc">Крупные куски мяса и птицы с костями. 1–2-й уровень</div>
+        </div>
+        <div class="mode-card danger" data-mode="pyro">
+          <div class="mode-icon">🛡️</div>
+          <div class="mode-name">Пиролитическая очистка</div>
+          <div class="mode-desc">P1 — 1ч 30 мин · P2 — 2ч 30 мин</div>
+        </div>
+      </div>
+
+      <!-- Mode detail overlay -->
+      <div class="mode-overlay" id="modeOverlay">
+        <div class="overlay-card">
+          <button class="overlay-close" id="overlayClose">✕</button>
+          <div class="overlay-icon" id="overlayIcon"></div>
+          <div class="overlay-name" id="overlayName"></div>
+          <div class="overlay-desc" id="overlayDesc"></div>
+          <div class="overlay-params" id="overlayParams"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PYROLYSIS -->
+    <section class="section" id="section-pyrolysis">
+      <div class="section-header">
+        <h2>Пиролиз</h2>
+        <p class="section-sub">Пиролитическая самоочистка</p>
+      </div>
+
+      <div class="pyro-warning">
+        <div class="pyro-warn-icon">⚠️</div>
+        <div class="pyro-warn-text">
+          <strong>Внимание!</strong> Риск ожогов и пожара. Из вентиляционных отверстий выходит горячий воздух. Удалите домашних животных из помещения!
+        </div>
+      </div>
+
+      <div class="pyro-programs">
+        <div class="pyro-prog" data-prog="P1">
+          <div class="pyro-badge">P1</div>
+          <div class="pyro-info">
+            <div class="pyro-prog-name">Лёгкая очистка</div>
+            <div class="pyro-duration">1 ч 30 мин</div>
+          </div>
+        </div>
+        <div class="pyro-prog" data-prog="P2">
+          <div class="pyro-badge">P2</div>
+          <div class="pyro-info">
+            <div class="pyro-prog-name">Нормальная очистка</div>
+            <div class="pyro-duration">2 ч 30 мин</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pyro-steps-title">Последовательность действий</div>
+      <div class="steps-flow">
+        <div class="step-node prep">
+          <div class="step-num">⚠</div>
+          <div class="step-body">
+            <div class="step-action">Подготовка — ОБЯЗАТЕЛЬНО</div>
+            <div class="step-detail">
+              <ul class="prep-list">
+                <li>Выключите духовку, дайте остыть</li>
+                <li>Извлеките ВСЕ принадлежности (полки, направляющие, противни)</li>
+                <li>Очистите дно и внутреннее стекло мягкой тряпкой</li>
+                <li>Уберите домашних животных и птиц из помещения</li>
+                <li>Обеспечьте вентиляцию помещения</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-node">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Установите функцию пиролиза</div>
+            <div class="step-display">Поверните ручку → режим <code>⬛⬛⬛</code> — мигает <code>→|</code></div>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-node">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Выберите программу очистки</div>
+            <div class="step-display">Поворот ручки термостата: <code>P1</code> или <code>P2</code></div>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-node">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action"><kbd>⏲</kbd> Нажмите кнопку часов для запуска</div>
+            <div class="step-detail">Дверца автоматически блокируется</div>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-node done">
+          <div class="step-num">✓</div>
+          <div class="step-body">
+            <div class="step-action">По завершении — дайте остыть</div>
+            <div class="step-display">Протрите камеру мягкой тряпкой, удалите остатки со дна</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-box warn-box">
+        🐦 Птицы и рептилии особо чувствительны к испарениям при пиролизе. Уберите их из помещения ДО начала очистки.
+      </div>
+      <div class="tip-box">
+        💡 Напоминание: <code>PYR</code> мигает 10 сек при каждом включении/выключении. Чтобы отключить — нажмите <kbd>🔔</kbd> + <kbd>°C</kbd> одновременно.
+      </div>
+    </section>
+
+    <!-- CLEANING -->
+    <section class="section" id="section-cleaning">
+      <div class="section-header">
+        <h2>Уход и чистка</h2>
+        <p class="section-sub">Ежедневный уход за духовым шкафом</p>
+      </div>
+
+      <div class="clean-tabs">
+        <button class="clean-tab active" data-clean="daily">Ежедневно</button>
+        <button class="clean-tab" data-clean="recess">Выемка камеры</button>
+        <button class="clean-tab" data-clean="door">Дверца</button>
+        <button class="clean-tab" data-clean="lamp">Лампа</button>
+        <button class="clean-tab" data-clean="rails">Направляющие</button>
+      </div>
+
+      <div class="clean-panel active" id="clean-daily">
+        <div class="clean-rule">
+          <div class="clean-rule-icon">🧽</div>
+          <div class="clean-rule-body">
+            <strong>Внутренняя камера</strong>
+            <p>Мойте после каждого использования. Накопление жира может привести к возгоранию.</p>
+          </div>
+        </div>
+        <div class="clean-rule">
+          <div class="clean-rule-icon">💧</div>
+          <div class="clean-rule-body">
+            <strong>Конденсат</strong>
+            <p>Предварительно прогрейте духовку 10 мин. Не оставляйте продукты дольше 20 мин. После — вытрите насухо.</p>
+          </div>
+        </div>
+        <div class="clean-rule">
+          <div class="clean-rule-icon">🔧</div>
+          <div class="clean-rule-body">
+            <strong>Аксессуары</strong>
+            <p>Очищайте после каждого использования. Мягкая тряпка + тёплая вода + нейтральное средство. Не в посудомоечной машине!</p>
+          </div>
+        </div>
+        <div class="clean-rule forbidden">
+          <div class="clean-rule-icon">🚫</div>
+          <div class="clean-rule-body">
+            <strong>Запрещено</strong>
+            <p>Пароочиститель, абразивы, острые металлические скребки на стекле дверцы, жёсткие губки.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="clean-panel" id="clean-recess">
+        <div class="clean-steps-title">Очистка выемки камеры (от известкового налёта)</div>
+        <div class="steps-flow">
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action">Налейте 250 мл белого уксуса в выемку</div>
+              <div class="step-detail">Концентрация не выше 6%, без добавок</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action">Оставьте на 30 минут при комнатной температуре</div>
+              <div class="step-detail">Уксус растворит известковый налёт</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">✓</div>
+            <div class="step-body">
+              <div class="step-action">Протрите мягкой тряпкой, смоченной в тёплой воде</div>
+            </div>
+          </div>
+        </div>
+        <div class="tip-box">💡 Для функции «Горячий воздух ПЛЮС» — мойте выемку каждые 5–10 циклов приготовления.</div>
+      </div>
+
+      <div class="clean-panel" id="clean-door">
+        <div class="clean-steps-title">Снятие и чистка дверцы</div>
+        <div class="steps-flow">
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action">Полностью откройте дверцу</div>
+              <div class="step-detail">Найдите петлю с правой стороны</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action">Отвёрткой поднимите и поверните рычажки обеих петель</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-action">Прикройте до первой фиксации → вытяните вверх и вперёд</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <div class="step-action">Снимите планку (B), извлеките стёкла сверху вниз</div>
+              <div class="step-detail">Начинайте с верхней панели. Три стеклянных панели (A и B)</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">✓</div>
+            <div class="step-body">
+              <div class="step-action">Мойте водой с мылом, тщательно вытрите</div>
+              <div class="step-detail">При установке: стёкла в правильном порядке A→B, рамка защёлкнется</div>
+            </div>
+          </div>
+        </div>
+        <div class="tip-box warn-box">⚠️ Не используйте духовой шкаф без стеклянных панелей. Не мойте стёкла в посудомоечной машине.</div>
+      </div>
+
+      <div class="clean-panel" id="clean-lamp">
+        <div class="clean-steps-title">Замена лампы (300°C)</div>
+        <div class="steps-flow">
+          <div class="step-node prep">
+            <div class="step-num">⚠</div>
+            <div class="step-body">
+              <div class="step-action">Выключите, отключите от сети, дайте остыть</div>
+              <div class="step-detail">Положите ткань на дно камеры</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action">Поверните плафон — снять</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action">Очистите стеклянный плафон от грязи</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">✓</div>
+            <div class="step-body">
+              <div class="step-action">Замените лампу (жаростойкость 300°C), верните плафон</div>
+              <div class="step-detail">Держите галогеновую лампу в перчатках или через ткань!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clean-panel" id="clean-rails">
+        <div class="clean-steps-title">Снятие направляющих для противней</div>
+        <div class="steps-flow">
+          <div class="step-node">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-action">Выключите и дайте остыть</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-action">Потяните переднюю часть от боковой стенки</div>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-node done">
+            <div class="step-num">✓</div>
+            <div class="step-body">
+              <div class="step-action">Вытяните заднюю часть — снимите направляющую</div>
+              <div class="step-detail">Установка — в обратном порядке. Упоры телескопических направляющих — вперёд.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CHEF -->
+    <section class="section" id="section-chef">
+      <div class="section-header">
+        <h2>Шеф-помощник</h2>
+        <p class="section-sub">Выберите блюдо — получите режим приготовления</p>
+      </div>
+
+      <div class="chef-categories">
+        <button class="chef-cat active" data-cat="baking">🥐 Выпечка</button>
+        <button class="chef-cat" data-cat="meat">🥩 Мясо</button>
+        <button class="chef-cat" data-cat="fish">🐟 Рыба</button>
+        <button class="chef-cat" data-cat="pizza">🍕 Пицца</button>
+        <button class="chef-cat" data-cat="frozen">🧊 Заморожен.</button>
+        <button class="chef-cat" data-cat="reheat">♨️ Разогрев</button>
+      </div>
+
+      <div class="chef-dishes" id="chefDishes"></div>
+
+      <div class="chef-result" id="chefResult" style="display:none">
+        <button class="chef-back" id="chefBack">← Назад</button>
+        <div class="result-dish" id="resultDish"></div>
+        <div class="result-cards">
+          <div class="result-card">
+            <div class="result-label">Режим</div>
+            <div class="result-val" id="resultMode"></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Температура</div>
+            <div class="result-val" id="resultTemp"></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Уровень</div>
+            <div class="result-val" id="resultLevel"></div>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Время</div>
+            <div class="result-val" id="resultTime"></div>
+          </div>
+        </div>
+        <div class="result-tips" id="resultTips"></div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

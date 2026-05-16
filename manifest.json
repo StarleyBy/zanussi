@@ -1,0 +1,27 @@
+{
+  "name": "Zanussi ZOPKD7X1A — Инструкция",
+  "short_name": "ZANUSSI",
+  "description": "Интерактивная инструкция по эксплуатации духового шкафа Zanussi ZOPKD7X1A",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "orientation": "portrait",
+  "lang": "ru",
+  "categories": ["utilities"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": []
+}
