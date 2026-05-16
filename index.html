@@ -9,14 +9,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="ZOPKD7X1A" />
   <meta name="description" content="Инструкция Zanussi ZOPKD7X1A — управление, режимы, пиролиз, очистка" />
-  <script>
-    if (window.location.protocol !== 'file:') {
-      const link = document.createElement('link');
-      link.rel = 'manifest';
-      link.href = 'manifest.json';
-      document.head.appendChild(link);
-    }
-  </script>
+  <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <title>ZANUSSI · ZOPKD7X1A</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -171,6 +164,9 @@
       <!-- TIME -->
       <div class="ctrl-panel active" id="ctrl-time">
         <div class="ctrl-title">Установка времени суток</div>
+        <div class="btn-legend">
+          <div class="legend-item"><span class="btn-sym clock-sym">⊙</span> — кнопка часов / подтверждения</div>
+        </div>
         <div class="steps-flow">
           <div class="step-node">
             <div class="step-num">1</div>
@@ -191,7 +187,7 @@
           <div class="step-node">
             <div class="step-num">3</div>
             <div class="step-body">
-              <div class="step-action"><kbd>⏲</kbd> Нажмите кнопку часов</div>
+              <div class="step-action">Нажмите <kbd class="kbd-sym clock-sym">⊙</kbd> для подтверждения</div>
               <div class="step-display">На дисплее: <code>мин.00</code> — мигает</div>
             </div>
           </div>
@@ -207,17 +203,20 @@
           <div class="step-node done">
             <div class="step-num">✓</div>
             <div class="step-body">
-              <div class="step-action"><kbd>⏲</kbd> Нажмите кнопку часов</div>
+              <div class="step-action">Нажмите <kbd class="kbd-sym clock-sym">⊙</kbd> для подтверждения</div>
               <div class="step-display">На дисплее отобразится заданное время</div>
             </div>
           </div>
         </div>
-        <div class="tip-box">💡 Изменить время можно только когда духовой шкаф выключен. Нажимайте кнопку часов повторно для редактирования.</div>
+        <div class="tip-box">💡 Изменить время можно только когда духовой шкаф выключен. Повторно нажимайте <span class="inline-sym clock-sym">⊙</span> для редактирования — на дисплее начнёт мигать <span class="inline-sym clock-sym">⊙</span>.</div>
       </div>
 
       <!-- DURATION -->
       <div class="ctrl-panel" id="ctrl-duration">
         <div class="ctrl-title">Функция «Продолж.» — автовыключение</div>
+        <div class="btn-legend">
+          <div class="legend-item"><span class="btn-sym clock-sym">⊙</span> — кнопка часов &nbsp;·&nbsp; <span class="btn-sym disp-sym">|→|</span> — индикатор на дисплее</div>
+        </div>
         <div class="steps-flow">
           <div class="step-node">
             <div class="step-num">1</div>
@@ -230,15 +229,15 @@
           <div class="step-node">
             <div class="step-num">2</div>
             <div class="step-body">
-              <div class="step-action"><kbd>⏲</kbd> Несколько раз нажмите кнопку часов</div>
-              <div class="step-display">Мигает: <code>|→|</code></div>
+              <div class="step-action">Несколько раз нажмите <kbd class="kbd-sym clock-sym">⊙</kbd></div>
+              <div class="step-display">Мигает на дисплее: <code class="disp-code">|→|</code></div>
             </div>
           </div>
           <div class="step-connector"></div>
           <div class="step-node">
             <div class="step-num">3</div>
             <div class="step-body">
-              <div class="step-action">Поворот ручки → минуты <kbd>⏲</kbd></div>
+              <div class="step-action">Поворот ручки → минуты → <kbd class="kbd-sym clock-sym">⊙</kbd></div>
               <div class="step-detail">Задайте количество минут, подтвердите</div>
             </div>
           </div>
@@ -246,7 +245,7 @@
           <div class="step-node">
             <div class="step-num">4</div>
             <div class="step-body">
-              <div class="step-action">Поворот ручки → часы <kbd>⏲</kbd></div>
+              <div class="step-action">Поворот ручки → часы → <kbd class="kbd-sym clock-sym">⊙</kbd></div>
               <div class="step-detail">Задайте количество часов, подтвердите</div>
             </div>
           </div>
@@ -264,6 +263,9 @@
       <!-- END -->
       <div class="ctrl-panel" id="ctrl-end">
         <div class="ctrl-title">Функция «Окончание» — время выключения</div>
+        <div class="btn-legend">
+          <div class="legend-item"><span class="btn-sym clock-sym">⊙</span> — кнопка часов &nbsp;·&nbsp; <span class="btn-sym disp-sym">→|</span> — индикатор на дисплее</div>
+        </div>
         <div class="steps-flow">
           <div class="step-node">
             <div class="step-num">1</div>
@@ -275,15 +277,15 @@
           <div class="step-node">
             <div class="step-num">2</div>
             <div class="step-body">
-              <div class="step-action"><kbd>⏲</kbd> Несколько раз нажмите кнопку часов</div>
-              <div class="step-display">Мигает: <code>→|</code></div>
+              <div class="step-action">Несколько раз нажмите <kbd class="kbd-sym clock-sym">⊙</kbd></div>
+              <div class="step-display">Мигает на дисплее: <code class="disp-code">→|</code></div>
             </div>
           </div>
           <div class="step-connector"></div>
           <div class="step-node">
             <div class="step-num">3</div>
             <div class="step-body">
-              <div class="step-action">Ручка → часы окончания <kbd>⏲</kbd></div>
+              <div class="step-action">Ручка → часы окончания → <kbd class="kbd-sym clock-sym">⊙</kbd></div>
               <div class="step-detail">Задайте часы, подтвердите</div>
             </div>
           </div>
@@ -291,22 +293,26 @@
           <div class="step-node done">
             <div class="step-num">✓</div>
             <div class="step-body">
-              <div class="step-action">Ручка → минуты  окончания <kbd>⏲</kbd></div>
+              <div class="step-action">Ручка → минуты окончания → <kbd class="kbd-sym clock-sym">⊙</kbd></div>
               <div class="step-display">Духовка выключится в заданное время</div>
             </div>
           </div>
         </div>
+        <div class="tip-box">💡 Отсрочка запуска (<code class="disp-code">|→|→|</code>) — комбинирует «Продолж.» + «Окончание». Нажимайте <span class="inline-sym clock-sym">⊙</span> пока не появится нужный символ.</div>
       </div>
 
       <!-- TIMER -->
       <div class="ctrl-panel" id="ctrl-timer">
         <div class="ctrl-title">Таймер обратного отсчёта</div>
+        <div class="btn-legend">
+          <div class="legend-item"><span class="btn-sym bell-sym">△</span> — кнопка таймера (удерж. 3с = лампа)</div>
+        </div>
         <div class="steps-flow">
           <div class="step-node">
             <div class="step-num">1</div>
             <div class="step-body">
-              <div class="step-action"><kbd>🔔</kbd> Нажмите кнопку таймера несколько раз</div>
-              <div class="step-display">Мигает: <code>🔔 00</code></div>
+              <div class="step-action">Несколько раз нажмите <kbd class="kbd-sym bell-sym">△</kbd></div>
+              <div class="step-display">Мигает: <code class="disp-code">△ 00</code></div>
             </div>
           </div>
           <div class="step-connector"></div>
@@ -334,12 +340,15 @@
             </div>
           </div>
         </div>
-        <div class="tip-box">💡 Таймер работает независимо от состояния духового шкафа (включён или выключен). Не управляет нагревом.</div>
+        <div class="tip-box">💡 Таймер работает независимо от состояния духового шкафа. Не управляет нагревом.<br/><br/>Удержите <span class="inline-sym bell-sym">△</span> более 3 сек — включение/выключение лампы освещения.</div>
       </div>
 
       <!-- CHILD LOCK -->
       <div class="ctrl-panel" id="ctrl-child">
         <div class="ctrl-title">Защита от детей</div>
+        <div class="btn-legend">
+          <div class="legend-item"><span class="btn-sym clock-sym">⊙</span> — кнопка часов &nbsp;·&nbsp; <span class="btn-sym temp-sym">°C</span> — кнопка температуры</div>
+        </div>
         <div class="steps-flow">
           <div class="step-node">
             <div class="step-num">1</div>
@@ -351,8 +360,8 @@
           <div class="step-node done">
             <div class="step-num">2</div>
             <div class="step-body">
-              <div class="step-action">Удерживайте <kbd>⏲</kbd> + <kbd>°C</kbd> одновременно 2 сек</div>
-              <div class="step-display">Сигнал → На дисплее: <code>SAFE 🔒</code></div>
+              <div class="step-action">Удерживайте <kbd class="kbd-sym clock-sym">⊙</kbd> + <kbd class="kbd-sym temp-sym">°C</kbd> одновременно 2 сек</div>
+              <div class="step-display">Сигнал → на дисплее: <code>SAFE</code> <code class="disp-code">⊡</code></div>
             </div>
           </div>
         </div>
@@ -370,7 +379,7 @@
           <div class="step-node done">
             <div class="step-num">2</div>
             <div class="step-body">
-              <div class="step-action">Удерживайте <kbd>⏲</kbd> + <kbd>°C</kbd> одновременно 2 сек</div>
+              <div class="step-action">Удерживайте <kbd class="kbd-sym clock-sym">⊙</kbd> + <kbd class="kbd-sym temp-sym">°C</kbd> одновременно 2 сек</div>
               <div class="step-display">На дисплее 5 сек: <code>Loc</code></div>
             </div>
           </div>
@@ -387,61 +396,193 @@
       </div>
 
       <div class="modes-grid">
+
         <div class="mode-card" data-mode="off">
-          <div class="mode-icon">○</div>
+          <div class="mode-icon">
+            <!-- Выкл: bold 0 -->
+            <svg viewBox="0 0 48 48" class="mode-svg"><text x="24" y="34" text-anchor="middle" font-size="30" font-weight="900" font-family="sans-serif" fill="currentColor">0</text></svg>
+          </div>
           <div class="mode-name">Выкл</div>
           <div class="mode-desc">Духовой шкаф отключён</div>
         </div>
+
         <div class="mode-card" data-mode="fast">
-          <div class="mode-icon">⚡</div>
+          <div class="mode-icon">
+            <!-- Быстрый нагрев: прямоугольник с двойной стрелкой >> -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round">
+              <rect x="6" y="8" width="36" height="32" rx="3"/>
+              <polyline points="13,24 20,17 20,24 27,17 27,31 20,24 20,31 13,24" fill="currentColor" stroke="none"/>
+              <polyline points="14,17 21,24 14,31" fill="none" stroke-width="3" stroke-linecap="round"/>
+              <polyline points="23,17 30,24 23,31" fill="none" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div class="mode-name">Быстрый нагрев</div>
-          <div class="mode-desc">Ускоренный разогрев до заданной температуры</div>
+          <div class="mode-desc">Ускоренный разогрев. Не ставьте продукты во время нагрева</div>
         </div>
+
         <div class="mode-card highlight" data-mode="convection">
-          <div class="mode-icon">🌀</div>
+          <div class="mode-icon">
+            <!-- Горячий воздух: рамка + вентилятор (трёхлопастной) -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="5" y="5" width="38" height="38" rx="4"/>
+              <circle cx="24" cy="24" r="3.5" fill="currentColor" stroke="none"/>
+              <!-- 3 лопасти вентилятора -->
+              <path d="M24 20.5 C24 16 20 13 17 15 C15 16.5 16.5 20 20.5 20.5 Z" fill="currentColor" stroke="none"/>
+              <path d="M27.5 25.5 C31.5 27 34.5 24 33 21 C31.8 19.2 28 19.5 27 23.5 Z" fill="currentColor" stroke="none"/>
+              <path d="M20.5 27 C18 30.5 19.5 34 23 34 C25 34 26.5 31 24 27.5 Z" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
           <div class="mode-name">Горячий воздух</div>
-          <div class="mode-desc">Одновременное выпекание на 3 уровнях. Температура на 20–40°C ниже, чем для традиционного режима</div>
+          <div class="mode-desc">3 уровня одновременно. Температура на 20–40°C ниже, чем при традиционном режиме</div>
         </div>
+
         <div class="mode-card" data-mode="pizza">
-          <div class="mode-icon">🍕</div>
+          <div class="mode-icon">
+            <!-- Функция Пицца: рамка + вентилятор + горизонтальная полоска снизу -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="5" y="5" width="38" height="38" rx="4"/>
+              <!-- Нижний нагрев — толстая полоса снизу в рамке -->
+              <line x1="9" y1="38" x2="39" y2="38" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              <!-- Вентилятор (сдвинут чуть вверх) -->
+              <circle cx="24" cy="21" r="3" fill="currentColor" stroke="none"/>
+              <path d="M24 17.5 C24 13.5 20.5 11 17.8 12.8 C16 14.1 17.3 17.5 21 18 Z" fill="currentColor" stroke="none"/>
+              <path d="M27 22.5 C30.5 24 33.2 21.5 32 19 C31 17.4 27.5 17.8 26.5 21.5 Z" fill="currentColor" stroke="none"/>
+              <path d="M21 24 C18.8 27 20 30.2 23.2 30.2 C25 30.2 26.2 27.5 24 24.5 Z" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
           <div class="mode-name">Функция Пицца</div>
-          <div class="mode-desc">Интенсивное подрумянивание, хрустящая нижняя корочка</div>
+          <div class="mode-desc">Хрустящая нижняя корочка, интенсивное подрумянивание</div>
         </div>
+
         <div class="mode-card" data-mode="traditional">
-          <div class="mode-icon">🟥</div>
+          <div class="mode-icon">
+            <!-- Традиционное: прямоугольник с двумя горизонтальными полосами (верх+низ) -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="6" y="8" width="36" height="32" rx="3"/>
+              <line x1="10" y1="12" x2="38" y2="12" stroke-width="4" stroke-linecap="round"/>
+              <line x1="10" y1="36" x2="38" y2="36" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div class="mode-name">Традиционное</div>
-          <div class="mode-desc">Выпекание и жарка на одном уровне</div>
+          <div class="mode-desc">Верхний + нижний нагрев. Выпекание на одном уровне</div>
         </div>
+
         <div class="mode-card" data-mode="defrost">
-          <div class="mode-icon">❄️</div>
-          <div class="mode-name">Разморозка</div>
-          <div class="mode-desc">Размораживание овощей и фруктов без нагрева</div>
+          <div class="mode-icon">
+            <!-- Размораживание: снежинка + 3 капли снизу -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="5" y="5" width="38" height="38" rx="4"/>
+              <!-- Снежинка -->
+              <line x1="24" y1="12" x2="24" y2="28" stroke-width="2.5"/>
+              <line x1="16" y1="16" x2="32" y2="24" stroke-width="2.5"/>
+              <line x1="32" y1="16" x2="16" y2="24" stroke-width="2.5"/>
+              <!-- Маленькие ветки снежинки -->
+              <line x1="24" y1="14" x2="21" y2="11" stroke-width="1.5"/><line x1="24" y1="14" x2="27" y2="11" stroke-width="1.5"/>
+              <line x1="24" y1="26" x2="21" y2="29" stroke-width="1.5"/><line x1="24" y1="26" x2="27" y2="29" stroke-width="1.5"/>
+              <line x1="18" y1="17" x2="15" y2="19" stroke-width="1.5"/><line x1="18" y1="17" x2="16" y2="14" stroke-width="1.5"/>
+              <line x1="30" y1="23" x2="33" y2="21" stroke-width="1.5"/><line x1="30" y1="23" x2="32" y2="26" stroke-width="1.5"/>
+              <!-- 3 капли -->
+              <ellipse cx="16" cy="36" rx="2.5" ry="3" fill="currentColor" stroke="none"/>
+              <ellipse cx="24" cy="36" rx="2.5" ry="3" fill="currentColor" stroke="none"/>
+              <ellipse cx="32" cy="36" rx="2.5" ry="3" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="mode-name">Размораживание</div>
+          <div class="mode-desc">Без нагрева. Для овощей и фруктов</div>
         </div>
+
         <div class="mode-card" data-mode="moist">
-          <div class="mode-icon">💧</div>
+          <div class="mode-icon">
+            <!-- Влажная конвекция: рамка + вентилятор + 1 капля внизу -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="5" y="5" width="38" height="38" rx="4"/>
+              <!-- Вентилятор выше центра -->
+              <circle cx="24" cy="20" r="3" fill="currentColor" stroke="none"/>
+              <path d="M24 16.5 C24 12.5 20.5 10 17.8 11.8 C16 13.1 17.3 16.5 21 17 Z" fill="currentColor" stroke="none"/>
+              <path d="M27 21.5 C30.5 23 33.2 20.5 32 18 C31 16.4 27.5 16.8 26.5 20.5 Z" fill="currentColor" stroke="none"/>
+              <path d="M21 23 C18.8 26 20 29.2 23.2 29.2 C25 29.2 26.2 26.5 24 23.5 Z" fill="currentColor" stroke="none"/>
+              <!-- Капля снизу -->
+              <path d="M24 33 C24 33 20 38 20 40 A4 4 0 0 0 28 40 C28 38 24 33 24 33Z" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
           <div class="mode-name">Влажная конвекция</div>
-          <div class="mode-desc">Режим экономии энергии. Использует остаточное тепло. Лампа выключается через 30 сек</div>
+          <div class="mode-desc">Экономия энергии. Остаточное тепло. Лампа выкл. через 30 сек</div>
         </div>
+
         <div class="mode-card highlight" data-mode="hotairplus">
-          <div class="mode-icon">💧🌀</div>
+          <div class="mode-icon">
+            <!-- Горячий воздух ПЛЮС: рамка + вентилятор с паровыми дугами сверху -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="5" y="5" width="38" height="38" rx="4"/>
+              <!-- Пар (3 дуги сверху) -->
+              <path d="M14 14 Q15 10 16 14 Q17 18 18 14" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M22 14 Q23 10 24 14 Q25 18 26 14" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M30 14 Q31 10 32 14 Q33 18 34 14" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <!-- Вентилятор внизу -->
+              <circle cx="24" cy="30" r="3" fill="currentColor" stroke="none"/>
+              <path d="M24 26.5 C24 22.5 20.5 20 17.8 21.8 C16 23.1 17.3 26.5 21 27 Z" fill="currentColor" stroke="none"/>
+              <path d="M27 31.5 C30.5 33 33.2 30.5 32 28 C31 26.4 27.5 26.8 26.5 30.5 Z" fill="currentColor" stroke="none"/>
+              <path d="M21 33 C18.8 36 20 39.2 23.2 39.2 C25 39.2 26.2 36.5 24 33.5 Z" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
           <div class="mode-name">Горячий воздух ПЛЮС</div>
-          <div class="mode-desc">Пар + конвекция. Сочность, хрустящая корочка, идеальный разогрев. 2-й уровень, 150–200 мл воды</div>
+          <div class="mode-desc">Пар + конвекция. 150–200 мл воды, 2-й уровень</div>
         </div>
+
         <div class="mode-card" data-mode="grill">
-          <div class="mode-icon">🔆</div>
+          <div class="mode-icon">
+            <!-- Гриль: прямоугольник + зигзаг-спираль сверху (нагревательный элемент) -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="6" y="8" width="36" height="32" rx="3"/>
+              <!-- Зигзаг-спираль (нагревательный элемент) вверху -->
+              <polyline points="10,16 15,12 20,16 25,12 30,16 35,12 38,14" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="none"/>
+              <polyline points="10,21 15,17 20,21 25,17 30,21 35,17 38,19" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill="none"/>
+            </svg>
+          </div>
           <div class="mode-name">Гриль</div>
           <div class="mode-desc">Тонкие продукты и тосты. 4-й уровень, макс. температура</div>
         </div>
+
         <div class="mode-card" data-mode="turbogrill">
-          <div class="mode-icon">🔥</div>
+          <div class="mode-icon">
+            <!-- Турбо-гриль: прямоугольник + зигзаг (гриль) + вентилятор снизу -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="5" y="5" width="38" height="38" rx="4"/>
+              <!-- Зигзаг-элемент сверху (тоньше) -->
+              <polyline points="9,13 14,9 19,13 24,9 29,13 34,9 39,11" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" fill="none"/>
+              <polyline points="9,18 14,14 19,18 24,14 29,18 34,14 39,16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8" fill="none"/>
+              <!-- Вентилятор снизу -->
+              <circle cx="24" cy="31" r="2.8" fill="currentColor" stroke="none"/>
+              <path d="M24 27.8 C24 24.2 21 22 18.5 23.6 C16.8 24.7 18 27.8 21.3 28.2 Z" fill="currentColor" stroke="none"/>
+              <path d="M26.8 32.5 C29.8 34 32.5 31.7 31.4 29.5 C30.5 27.9 27.2 28.3 26.3 31.5 Z" fill="currentColor" stroke="none"/>
+              <path d="M21.5 33.5 C19.5 36.5 20.5 39.5 23.5 39.5 C25 39.5 26 37 24 34.3 Z" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
           <div class="mode-name">Турбо-гриль</div>
-          <div class="mode-desc">Крупные куски мяса и птицы с костями. 1–2-й уровень</div>
+          <div class="mode-desc">Крупные куски мяса с костями. 1–2-й уровень</div>
         </div>
+
         <div class="mode-card danger" data-mode="pyro">
-          <div class="mode-icon">🛡️</div>
-          <div class="mode-name">Пиролитическая очистка</div>
+          <div class="mode-icon">
+            <!-- Пирол.чистка: рамка + сетка 3×3 квадратов -->
+            <svg viewBox="0 0 48 48" class="mode-svg" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="5" y="5" width="38" height="38" rx="4"/>
+              <!-- 9 квадратов 3×3 -->
+              <rect x="11" y="11" width="7" height="7" rx="1" fill="currentColor" stroke="none"/>
+              <rect x="20.5" y="11" width="7" height="7" rx="1" fill="currentColor" stroke="none"/>
+              <rect x="30" y="11" width="7" height="7" rx="1" fill="currentColor" stroke="none"/>
+              <rect x="11" y="20.5" width="7" height="7" rx="1" fill="currentColor" stroke="none"/>
+              <rect x="20.5" y="20.5" width="7" height="7" rx="1" fill="currentColor" stroke="none"/>
+              <rect x="30" y="20.5" width="7" height="7" rx="1" fill="currentColor" stroke="none"/>
+              <rect x="11" y="30" width="7" height="7" rx="1" fill="currentColor" stroke="none"/>
+              <rect x="20.5" y="30" width="7" height="7" rx="1" fill="currentColor" stroke="none"/>
+              <rect x="30" y="30" width="7" height="7" rx="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div class="mode-name">Пирол. очистка</div>
           <div class="mode-desc">P1 — 1ч 30 мин · P2 — 2ч 30 мин</div>
         </div>
+
       </div>
 
       <!-- Mode detail overlay -->
@@ -508,8 +649,8 @@
         <div class="step-node">
           <div class="step-num">1</div>
           <div class="step-body">
-            <div class="step-action">Установите функцию пиролиза</div>
-            <div class="step-display">Поверните ручку → режим <code>⬛⬛⬛</code> — мигает <code>→|</code></div>
+            <div class="step-action">Установите режим пиролиза</div>
+            <div class="step-display">Поверните ручку режимов → символ <code>⊞⊞⊞</code> — мигает <code class="disp-code">→|</code></div>
           </div>
         </div>
         <div class="step-connector"></div>
@@ -524,8 +665,8 @@
         <div class="step-node">
           <div class="step-num">3</div>
           <div class="step-body">
-            <div class="step-action"><kbd>⏲</kbd> Нажмите кнопку часов для запуска</div>
-            <div class="step-detail">Дверца автоматически блокируется</div>
+            <div class="step-action">Нажмите <kbd class="kbd-sym clock-sym">⊙</kbd> для запуска</div>
+            <div class="step-detail">Дверца автоматически блокируется <span class="inline-sym">⊡</span></div>
           </div>
         </div>
         <div class="step-connector"></div>
@@ -542,7 +683,7 @@
         🐦 Птицы и рептилии особо чувствительны к испарениям при пиролизе. Уберите их из помещения ДО начала очистки.
       </div>
       <div class="tip-box">
-        💡 Напоминание: <code>PYR</code> мигает 10 сек при каждом включении/выключении. Чтобы отключить — нажмите <kbd>🔔</kbd> + <kbd>°C</kbd> одновременно.
+        💡 Напоминание: <code>PYR</code> мигает 10 сек при каждом включении/выключении. Чтобы отключить — нажмите <kbd class="kbd-sym bell-sym">△</kbd> + <kbd class="kbd-sym temp-sym">°C</kbd> одновременно.
       </div>
     </section>
 

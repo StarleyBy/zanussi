@@ -764,6 +764,103 @@ code {
   line-height: 1.7;
 }
 
+/* ===== BUTTON SYMBOLS (from manual) ===== */
+.btn-legend {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.875rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.legend-item {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+/* The symbol pill — mimics the actual button */
+.btn-sym {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 2px 7px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border: 1.5px solid;
+  vertical-align: middle;
+}
+.kbd-sym {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.4;
+  border: 1.5px solid;
+  border-bottom-width: 3px;
+  vertical-align: middle;
+  cursor: default;
+}
+.inline-sym {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+/* Clock/confirm button ⊙ — blue-white */
+.clock-sym {
+  color: var(--accent3);
+  border-color: var(--accent3);
+  background: rgba(56,189,248,0.08);
+}
+
+/* Bell/timer button △ — amber */
+.bell-sym {
+  color: var(--warn);
+  border-color: var(--warn);
+  background: rgba(251,191,36,0.08);
+}
+
+/* Temperature button °C — accent purple */
+.temp-sym {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(192,132,252,0.08);
+  font-style: italic;
+}
+
+/* Display symbols |→| →| ⊡ — monochrome display look */
+.disp-sym {
+  color: var(--text2);
+  border-color: var(--border2);
+  background: var(--bg2);
+  letter-spacing: 0.05em;
+}
+.disp-code {
+  font-family: var(--font-mono);
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-size: 0.82em;
+  color: var(--text2);
+  letter-spacing: 0.05em;
+}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }

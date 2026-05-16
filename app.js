@@ -415,7 +415,19 @@ document.querySelectorAll('.chef-cat').forEach(btn => {
 // Init chef
 renderDishes(currentCategory);
 
+// ===== BUTTON SYMBOLS LEGEND (from manual) =====
+// All symbols are rendered in the HTML via CSS class .btn-sym
+// ⊙  — кнопка часов / подтверждения (clock/confirm button)
+// △  — кнопка таймера (timer bell button)  
+// ☼  — кнопка лампы / таймер (lamp + timer, hold 3s)
+// °C — кнопка температуры (temp check button)
+// |→| — функция Продолж. (duration display symbol)
+// →|  — функция Окончание (end time display symbol)
+// |→|→| — отсрочка запуска (delayed start)
+// ⊡  — блокировка дверцы (door lock indicator)
+// ≡  — полоски нагрева на дисплее (heating bars)
+
 // ===== SERVICE WORKER =====
-if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => {});
 }
